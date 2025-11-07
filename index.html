@@ -336,7 +336,7 @@
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
-                const result = await response.json();
+                const result = await response.text();
                 responseBox.textContent = JSON.stringify(result, null, 2);
                 
             } catch (error) {
